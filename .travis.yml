@@ -6,3 +6,15 @@ before_install:
 
 script:
   - docker run -e CI=true kvs/react-app npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "hostingReactApp"
+  env: "React-app-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-765212525841"
+  bucket_path: "hostingReactApp"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
