@@ -11,7 +11,7 @@ deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
   app: "hostingReactApp"
-  env: "React-app-env"
+  env: "react-app-env"
   bucket_name: "elasticbeanstalk-ap-south-1-765212525841"
   bucket_path: "hostingReactApp"
   on:
